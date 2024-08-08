@@ -89,3 +89,34 @@ Run:
 ```pwsh
 npm run build
 ```
+
+## Authentication with NextJS
+
+### Install
+Go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
+In the command prompt run:
+```pwsh
+npx create-next-app@latest
+```
+<img width=600px src="">
+
+Open up the new saas-dashbaord folder in VS code 
+Run:
+```pwsh
+npm run dev
+```
+Initialize [shadcn](https://ui.shadcn.com/docs/installation/next) and choose all the default options:
+```pwsh
+npx shadcn-ui@latest init
+```
+Add a button:
+```pwsh
+npx shadcn-ui@latest add button
+```
+Next install Clerk NextJS:
+```pwsh
+npm install @clerk/nextjs
+```
+Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
+
+Add Middleware to your app
