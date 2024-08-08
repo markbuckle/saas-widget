@@ -117,6 +117,12 @@ Next install Clerk NextJS:
 ```pwsh
 npm install @clerk/nextjs
 ```
-Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
 
 Add Middleware to your app
+
+Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
+
+Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_au*MTE3OTk4MTE0MC4xNzIzMTIwMjA5*_ga*MTIyMjUwNjA4Ny4xNzIzMTIwMjA5*_ga_1WMF5X234K*MTcyMzEyNTc1NS4yLjEuMTcyMzEyNTc1Ni4wLjAuMA..) to get your .env.local values.
+
+Add ClerkProvider to your app
+
