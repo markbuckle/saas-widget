@@ -113,16 +113,23 @@ Add a button:
 ```pwsh
 npx shadcn-ui@latest add button
 ```
+Use the [clerk guide](https://clerk.com/docs/quickstarts/nextjs) for the next few steps:
 Next install Clerk NextJS:
 ```pwsh
 npm install @clerk/nextjs
 ```
-
-Add Middleware to your app
+Add Middleware to your app (Step 3)
 
 Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
 
 Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_au*MTE3OTk4MTE0MC4xNzIzMTIwMjA5*_ga*MTIyMjUwNjA4Ny4xNzIzMTIwMjA5*_ga_1WMF5X234K*MTcyMzEyNTc1NS4yLjEuMTcyMzEyNTc1Ni4wLjAuMA..) to get your .env.local values.
 
 Add ClerkProvider to your app
+
+Add a [Dialog component](https://ui.shadcn.com/docs/components/dialog) using these steps.
+
+Install [Lucide React](https://lucide.dev/guide/installation)
+```pwsh
+npm install lucide-react
+```
 
