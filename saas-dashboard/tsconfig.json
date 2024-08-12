@@ -19,7 +19,12 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    //...other properties
+    "typeRoots": [
+      "src/customTypings",
+      "node_modules/@types"
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/utils.ts"],
   "exclude": ["node_modules"]
