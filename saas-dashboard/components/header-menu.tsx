@@ -31,14 +31,14 @@ const HeaderMenu = () => {
         <DropdownMenuItem asChild>
           <Link href="/dashboard" className="flex">
             <Folder className="mr-2 h-4 w-4" />
+            <span>Projects</span>
           </Link>
-          <span>Projects</span>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/payments" className="flex">
             <CreditCard className="mr-2 h-4 w-4" />
+            <span>Billing</span>
           </Link>
-          <span>Billing</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -2,7 +2,7 @@ import { db } from "@/db";
 import { eq } from "drizzle-orm";
 import { projects as dbProjects } from "@/db/schema";
 import Link from "next/link";
-import { Globe, ChevronLeft } from "lucide-react";
+import { Globe, ChevronLeft, Code } from "lucide-react";
 import Table from "@/components/table";
 
 const page = async ({
@@ -40,15 +40,24 @@ const page = async ({
             {project.description}
           </h2>
         </div>
-        {project.url ? (
+        <div className="flex flex-col">
+          {project.url ? (
+            <Link
+              href={project.url}
+              className="underline text-indigo-700 flex items-center"
+            >
+              <Globe className="h-5 w-5 mr-2" />
+              <span className="text-lg">Visit site</span>
+            </Link>
+          ) : null}
           <Link
-            href={project.url}
-            className="underline text-indigo-700 flex items-center"
+            href={`/projects/${params.projectId}/instructions`}
+            className="underline text-indigo-700 flex items-center mt-2"
           >
-            <Globe className="h-5 w-5 mr-2" />
-            <span className="text-lg">Visit site</span>
+            <Code className="h-5 w-5 mr-2" />
+            <span className="text-lg">Embed Code</span>
           </Link>
-        ) : null}
+        </div>
       </div>
       <div>
         <Table data={project.feedbacks} />

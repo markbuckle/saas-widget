@@ -7,6 +7,7 @@ import {
   ChevronsRight,
   ChevronsLeft,
 } from "lucide-react";
+import Ratings from "./ratings";
 
 import {
   Column,
@@ -42,6 +43,18 @@ function Table(props: { data: Feedback[] }) {
         id: "userEmail",
         cell: (info) => info.getValue(),
         header: () => <span>Email</span>,
+        footer: (props) => props.column.id,
+      },
+      {
+        accessorFn: (row) => row.rating,
+        id: "rating",
+        cell: (info) =>
+          info.getValue() === null ? (
+            <span>N/A</span>
+          ) : (
+            <Ratings rating={info.getValue() as number} count={5} />
+          ),
+        header: () => <span>Rating</span>,
         footer: (props) => props.column.id,
       },
       {
