@@ -255,6 +255,36 @@ npm install @supabase/supabase-js
 
 Create a new file in the /src folder called supabaseClient.js
 
+## Payments
+
+Create a Stripe account then go to the [Developers console](https://dashboard.stripe.com/test/developers). Go to the API keys section and include the keys in your .env.local file with the designated names below. Copy and paste the value for each key provided in your account:
+```.env
+NEXT_PUBLIC_PUBLISHABLE_KEY=xxxxxxxxxxxxxxx
+STRIPE_SECRET_KEY=xxxxxxxxxxxxxxxxxxx
+```
+Next go to the Product Catalog and create prices for your app.
+
+Once created, go to your lib folder and create a file called payments.ts
+
+Next install stripe:
+```pwsh
+npm install stripe @stripe/stripe-js
+```
+
+Create stripe.ts and stripe-client.ts files (see code)
+
+Create a Stripe checkout session using the [Stripe docs](https://docs.stripe.com/api/checkout/sessions/create?lang=node) for guidance
+
+### [Webhooks](https://docs.stripe.com/webhooks)
+When building Stripe integrations, you might want your applications to receive events as they occur in your Stripe accounts, so that your backend systems can execute actions accordingly.
+
+Once you update your Webhook route.ts code, go to your Stripe dashboard and go to the Webhooks section. Click Add an Endpoint. Make a url something like:
+
+https://saas-app.vercel.app/api/stripe/webhook
+
+and add the relevant events that are in your route.ts file.
+
+## Landing Page
 
 
 
