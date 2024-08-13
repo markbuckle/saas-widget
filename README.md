@@ -133,3 +133,68 @@ Install [Lucide React](https://lucide.dev/guide/installation)
 npm install lucide-react
 ```
 
+## Database Setup with Supabase, Drizzle and PostgresSQL
+
+Install [Supabase dependencies](https://orm.drizzle.team/docs/get-started-postgresql#supabase):
+```pwsh
+npm i drizzle-orm postgres
+```
+If the React versions conflict try running:
+```pwsh
+npm i react@latest react-dom@latest
+```
+And then run this again:
+```pwsh
+npm i drizzle-orm postgres
+```
+Install Drizzle dependencies:
+```pwsh
+npm i -D drizzle-kit
+```
+Create a new folder in your root directory called /db and then a new file called schema.ts.
+
+Create your models. Copy and paste the code from [Step 2](https://orm.drizzle.team/docs/get-started-postgresql#supabase). Make appropriate edits to the code for your specific database.
+
+Make your first Query. Copy and paste the code from step 3. Again make appropriate edits based on your speicific database.
+
+Connection pooling (optional). Copy and paste the code from step 4. Again make appropriate edits based on your speicific database. 
+
+install the drizzle kit: 
+```pwsh
+npm i -D drizzle-kit
+```
+
+Create a drizzle.config.ts file.
+
+Add the following files to your packgae.json scripts:
+```json
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+```
+
+Create a new [supabase project](https://supabase.com/dashboard/projects)
+
+Run the migration:
+```pwsh
+npm run db:migrate
+```
+Update page.tsx and schema.ts with User credentials
+
+Run the push:
+```pwsh
+npm run db:push
+```
+
+If you receive a connection error it's likely because it is not reading the correct dbCredentials.
+
+Run:
+```pwsh
+npm install dotenv
+```
+
+## Projects Page
+
+## Feedback Table
+
