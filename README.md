@@ -195,6 +195,31 @@ npm install dotenv
 ```
 
 ## Projects Page
+Add skeleton:
+```pwsh
+npx shadcn-ui@latest add skeleton
+```
 
 ## Feedback Table
+```pwsh
+
+Once code is updated, push changes with:
+```pwsh
+npm run db:push
+```
+
+Use [TanStack Tables ](https://tanstack.com/table/latest/docs/framework/react/examples/basic) to build a nice table.
+
+Install with:
+```pwsh
+npm install @tanstack/react-table
+```
+Use the [Pagination example](https://tanstack.com/table/latest/docs/framework/react/examples/pagination) as a template and edit the code according to how you want the table displayed on your SaaS.
+
+Create the [Shadcn dropdown button](https://ui.shadcn.com/docs/components/dropdown-menu):
+```pwsh
+npx shadcn-ui@latest add dropdown-menu
+```
+Create a new file in the components folder named header-menu.tsx
+
 
