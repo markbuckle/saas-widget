@@ -126,6 +126,8 @@ Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_a
 
 Add ClerkProvider to your app
 
+**MAKE SURE to change your DTABASE_URL port to 5432. There has been a lot of [issues reported](https://github.com/drizzle-team/drizzle-orm/issues/2338) online recently about port 6543. **
+
 Add a [Dialog component](https://ui.shadcn.com/docs/components/dialog) using these steps.
 
 Install [Lucide React](https://lucide.dev/guide/installation)
@@ -195,6 +197,65 @@ npm install dotenv
 ```
 
 ## Projects Page
+Add skeleton:
+```pwsh
+npx shadcn-ui@latest add skeleton
+```
 
 ## Feedback Table
+```pwsh
+
+Once code is updated, push changes with:
+```pwsh
+npm run db:push
+```
+
+Use [TanStack Tables ](https://tanstack.com/table/latest/docs/framework/react/examples/basic) to build a nice table.
+
+Install with:
+```pwsh
+npm install @tanstack/react-table
+```
+Use the [Pagination example](https://tanstack.com/table/latest/docs/framework/react/examples/pagination) as a template and edit the code according to how you want the table displayed on your SaaS.
+
+Create the [Shadcn dropdown button](https://ui.shadcn.com/docs/components/dropdown-menu):
+```pwsh
+npx shadcn-ui@latest add dropdown-menu
+```
+Create a new file in the components folder named header-menu.tsx
+
+In your Supabase dashboard go to the SQL Editor and create a new Query. Use the [Supabase functions docs](https://supabase.com/docs/guides/database/functions) as a guide. Adjust your code according to your table / specific parameters. it may look something like this:
+
+```supa
+create or replace function add_feedback(p_project_id integer, p_user_name text, p_user_email text, p_message text)
+returns bigint
+language plpgsql
+as $$
+declare
+  new_feedback_id bigint;
+begin
+  insert into feedbacks(project_id, user_name, user_email, message) 
+  values (p_project_id, p_user_name, p_user_email, p_message)
+  returning id into new_feedback_id;
+
+  return new_feedback_id ;
+  end;
+$$;
+```
+
+Open a new query and test the function using:
+```supa
+select add_feedback(4, 'user', 'test@gmail.com', 'testing db function supabase');
+```
+
+Install the [Supabase Javascript Client Library ](https://supabase.com/docs/reference/javascript/installing) in the root folder (/Saas-App):
+```pwsh
+npm install @supabase/supabase-js
+```
+
+Create a new file in the /src folder called supabaseClient.js
+
+
+
+
 
