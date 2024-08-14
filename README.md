@@ -5,7 +5,7 @@
 Using the [Vite JS guide](https://vitejs.dev/guide/), create a Vite project by running the following in your terminal:
 
 ```pwsh
-npm create vite@4.3.1 saas-app -- --template react
+npm create vite@4.3.1 saas-widget -- --template react
 ```
 Choose react and javascript options
 
@@ -248,7 +248,7 @@ Open a new query and test the function using:
 select add_feedback(4, 'user', 'test@gmail.com', 'testing db function supabase');
 ```
 
-Install the [Supabase Javascript Client Library ](https://supabase.com/docs/reference/javascript/installing) in the root folder (/Saas-App):
+Install the [Supabase Javascript Client Library ](https://supabase.com/docs/reference/javascript/installing) in the root folder (/saas-widget):
 ```pwsh
 npm install @supabase/supabase-js
 ```
@@ -280,7 +280,7 @@ When building Stripe integrations, you might want your applications to receive e
 
 Once you update your Webhook route.ts code, go to your Stripe dashboard and go to the Webhooks section. Click Add an Endpoint. Make a url something like:
 
-https://saas-app.vercel.app/api/stripe/webhook
+https://saas-widget.vercel.app/api/stripe/webhook
 
 and add the relevant events that are in your route.ts file.
 
