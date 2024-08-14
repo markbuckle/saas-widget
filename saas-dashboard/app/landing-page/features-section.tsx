@@ -7,7 +7,7 @@ const features = [
   },
   {
     title: "Customizable",
-    description: "Customize Nexx to fit your needs and preferences.",
+    description: "Customize FeedFlo to fit your needs and preferences.",
     icon: "icon-2",
   },
   {
@@ -16,11 +16,11 @@ const features = [
   },
   {
     title: "Secure",
-    description: "Your data is safe and secure with Nexx.",
+    description: "Your data is safe and secure with FeedFlo.",
   },
   {
     title: "Scalable",
-    description: "Grow your business with Nexx as you scale.",
+    description: "Grow your business with FeedFlo as you scale.",
   },
   {
     title: "Fast Support",
@@ -31,8 +31,8 @@ const features = [
 const FeaturesSection = () => {
   return (
     <section className="container mx-auto max-w-screen-xl px-4 my-24 flex items-center flex-col">
-      <h2 className="mb-6 text-2xl font-bold">Features</h2>
-      <div className="container mx-auto">
+      <h2 className="mb-6 text-3xl font-bold">Features</h2>
+      <div className="container mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {features.map((feature, index) => (
             <Feature key={index} {...feature} />

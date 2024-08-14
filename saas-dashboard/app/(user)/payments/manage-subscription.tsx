@@ -37,7 +37,7 @@ const ManageSubscription = () => {
   return (
     <Button
       onClick={redirectToCustomerPortal}
-      className="bg-indigo-700"
+      className="bg-blue-400"
       disabled={loading}
     >
       {loading ? (

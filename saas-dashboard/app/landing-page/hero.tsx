@@ -7,14 +7,14 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className="grow">
-      <div className="container mx-auto px-4 mb-24 mt-4 flex flex-col md:flex-row justify-center">
+      <div className="container mx-auto px-4 mb-24 flex flex-col md:flex-row justify-center">
         <div className="flex flex-col max-w-sm justify-center">
           <div className="mb-8">
             <h1 className="mb-5 text-5xl font-extrabold leading-tight">
-              Collect your feedback seamlessly
+              Collect user feedback seamlessly
             </h1>
-            <p className="text-gray-500 texl-lg">
-              Easily integrate Nexx and start collecting feedback today.
+            <p className="text-gray-500 text-lg">
+              Easily integrate FeedFlo and start collecting feedback today.
             </p>
           </div>
           <div>
@@ -25,7 +25,7 @@ const Hero = () => {
                     <LogIn className="w-4 h-4 mr-2" />
                     Get Started
                   </Button>
-                  <Button variant="secondary" asChild>
+                  <Button className="bg-blue-300" variant="secondary" asChild>
                     <Link href="https://github.com">
                       <Github className="w-4 h-4 mr-2" />
                       GitHub

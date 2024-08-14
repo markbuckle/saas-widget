@@ -18,9 +18,9 @@ const PricingCard = ({
   };
 
   return (
-    <div className="border flex flex-col justify-between bg-white/20 rounded-lg h-full p-6 hover:shadow-md text-left relative">
+    <div className="border flex flex-col justify-between bg-gray-200 rounded-lg h-full p-6 hover:shadow-md text-left relative">
       {isPopular && (
-        <div className="absolute top-0 right-0 bg-gray-900 text-white px-2 py-1 rounded-bl-lg rounded-tr-lg">
+        <div className="absolute top-0 right-0 bg-blue-400 text-white px-2 py-1 rounded-bl-lg rounded-tr-lg">
           Popular
         </div>
       )}
@@ -30,7 +30,7 @@ const PricingCard = ({
         </div>
         <h2 className="font-bold text-xl my-2">{title}</h2>
         <p>{description}</p>
-        <div className="flex-grow border-t border-gray-400 opacity-25 my-3"></div>
+        <div className="flex-grow border-t border-gray-600 opacity-25 my-3"></div>
         <ul>
           {features.map((feature, index) => (
             <li

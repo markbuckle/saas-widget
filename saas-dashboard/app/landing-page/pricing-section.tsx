@@ -54,11 +54,11 @@ export const pricingPlans: PricingPlan[] = [
 const PricingSection = () => {
   return (
     <div className="text-center">
-      <h1 className="capitalize text-3xl">Pricing</h1>
-      <h2 className="font-extrabold text-3xl mb-8 pt-3">
+      <h1 className="capitalize text-3xl font-bold">Pricing</h1>
+      <h2 className="font-italicize text-2xl mb-4 mt-2 pt-3">
         Flexible Pricing to Fit Your Needs
       </h2>
-      <div className="mt-10 grid items-center grid-cols-1 gap-3 md:grid-cols-3 max-w-screen-xl">
+      <div className="mt-8 grid items-center grid-cols-1 gap-3 md:grid-cols-3 max-w-screen-xl">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={index} {...plan} />
         ))}

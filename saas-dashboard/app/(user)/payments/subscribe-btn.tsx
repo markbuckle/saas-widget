@@ -42,7 +42,7 @@ const SubscribeBtn = ({ price }: Props) => {
   return (
     <Button
       onClick={() => handleCheckout(price)}
-      className="bg-indigo-700"
+      className="bg-blue-400"
       disabled={loading}
     >
       {loading ? (
