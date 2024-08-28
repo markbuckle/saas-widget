@@ -1,3 +1,3 @@
 import WidgetWebComponent from "./web-component";
 
-customElements.define('widget-web-component', WidgetWebComponent);
+customElements.define("my-widget", WidgetWebComponent);
