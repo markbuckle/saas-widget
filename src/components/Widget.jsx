@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { Separator } from "./ui/separator";
 import { useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import tailwindStyles from "../index.css?inline";
@@ -100,6 +101,17 @@ export const Widget = ({ projectId }) => {
                 </form>
               </div>
             )}
+                        <Separator className="my-4" />
+            <div className="text-gray-600">
+              Powered by{" "}
+              <a
+                href="https://saas-dashboard-seven.vercel.app/"
+                target="_blank"
+                className="text-indigo-600 hover:underline"
+              >
+                FeedFlo ⚡️
+              </a>
+            </div>
           </PopoverContent>
         </Popover>
       </div>
