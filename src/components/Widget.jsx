@@ -109,7 +109,7 @@ export const Widget = ({ projectId }) => {
                 target="_blank"
                 className="text-indigo-600 hover:underline"
               >
-                FeedFlo ⚡️
+                FeedFlo⚡️
               </a>
             </div>
           </PopoverContent>
