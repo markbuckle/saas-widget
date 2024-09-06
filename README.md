@@ -1,5 +1,3 @@
-This widget is experiencing a bug. Working on a solution. 
-
 # SaaS-Widget
 
 ## Build initial framework with Vite & React
