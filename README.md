@@ -1,6 +1,6 @@
-# SaaS-Widget
+<h1>SaaS-Widget</h1>
 
-## Build initial framework with Vite & React
+<h3>Build initial framework with Vite & React</h3>
 
 Using the [Vite JS guide](https://vitejs.dev/guide/), create a Vite project by running the following in your terminal:
 
@@ -23,9 +23,9 @@ To start the application, run:
 npm run dev
 ```
 
-## Create an Embeddable widget
+<h3>Create an Embeddable widget</h3>
 
-### Install and integrate Tailwind
+<h4>Install and integrate Tailwind</h4>
 
 Using the [ShadnCn/Ui](https://ui.shadcn.com/docs/installation/vite) guide run:
 ```pwsh
@@ -71,17 +71,17 @@ Add a [label](https://ui.shadcn.com/docs/components/label) by running:
 npx shadcn-ui@latest add label input
 ```
 
-### Icons using Lucide
+<h3>Icons using Lucide</h3>
 
 The [Lucide](https://lucide.dev/) library works with React and Tailwind, but we're going to keep it as light as possible in this project so we'll just use the svg's.
 
-### Add a popover component
+<h3>Add a popover component</h3>
 
 From [ShadCN](https://ui.shadcn.com/docs/components/popover) run:
 ```pwsh
 npx shadcn-ui@latest add popover
 ```
-### Add a Web component
+<h3>Add the Web component</h3>
 
 In the /src folder create an index.jsx file.
 
